@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -17,6 +17,7 @@
 		DBAAEC9626174B9000182F04 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DBAAEC9426174B9000182F04 /* LaunchScreen.storyboard */; };
 		DBAAECA126174B9000182F04 /* MVVM_PraticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAECA026174B9000182F04 /* MVVM_PraticeTests.swift */; };
 		DBAAECAC26174B9000182F04 /* MVVM_PraticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAECAB26174B9000182F04 /* MVVM_PraticeUITests.swift */; };
+		DBAAECD326174E0300182F04 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAECD226174E0300182F04 /* APIService.swift */; };
 		E26E0E24DD666E61060742A2 /* Pods_MVVM_PraticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA10945BD52A483FF139006 /* Pods_MVVM_PraticeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -58,6 +59,7 @@
 		DBAAECA726174B9000182F04 /* MVVM-PraticeUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "MVVM-PraticeUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		DBAAECAB26174B9000182F04 /* MVVM_PraticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_PraticeUITests.swift; sourceTree = "<group>"; };
 		DBAAECAD26174B9000182F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DBAAECD226174E0300182F04 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
 		F1C352E039949B5C6972693E /* Pods-MVVM-Pratice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Pratice.release.xcconfig"; path = "Target Support Files/Pods-MVVM-Pratice/Pods-MVVM-Pratice.release.xcconfig"; sourceTree = "<group>"; };
 		F380E5A3EEC319E71263FF7D /* Pods-MVVM-PraticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-PraticeTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVM-PraticeTests/Pods-MVVM-PraticeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F68FB1E39904C69763154077 /* Pods-MVVM-Pratice-MVVM-PraticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Pratice-MVVM-PraticeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVVM-Pratice-MVVM-PraticeUITests/Pods-MVVM-Pratice-MVVM-PraticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -111,7 +113,6 @@
 				F380E5A3EEC319E71263FF7D /* Pods-MVVM-PraticeTests.debug.xcconfig */,
 				4B9EC01489F146D7A561C83E /* Pods-MVVM-PraticeTests.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -140,6 +141,9 @@
 		DBAAEC8826174B8E00182F04 /* MVVM-Pratice */ = {
 			isa = PBXGroup;
 			children = (
+				DBAAECD126174DE300182F04 /* APIServices */,
+				DBAAECCD26174DCF00182F04 /* Extensions */,
+				DBAAECC926174DB800182F04 /* Modules */,
 				DBAAEC8926174B8E00182F04 /* AppDelegate.swift */,
 				DBAAEC8B26174B8E00182F04 /* SceneDelegate.swift */,
 				DBAAEC8D26174B8E00182F04 /* ViewController.swift */,
@@ -167,6 +171,44 @@
 				DBAAECAD26174B9000182F04 /* Info.plist */,
 			);
 			path = "MVVM-PraticeUITests";
+			sourceTree = "<group>";
+		};
+		DBAAECC926174DB800182F04 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				DBAAECD726174E2C00182F04 /* TaipeiZooPlant */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		DBAAECCD26174DCF00182F04 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		DBAAECD126174DE300182F04 /* APIServices */ = {
+			isa = PBXGroup;
+			children = (
+				DBAAECD226174E0300182F04 /* APIService.swift */,
+			);
+			path = APIServices;
+			sourceTree = "<group>";
+		};
+		DBAAECD726174E2C00182F04 /* TaipeiZooPlant */ = {
+			isa = PBXGroup;
+			children = (
+				DBAAECD826174E3700182F04 /* Models */,
+			);
+			path = TaipeiZooPlant;
+			sourceTree = "<group>";
+		};
+		DBAAECD826174E3700182F04 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -409,6 +451,7 @@
 			files = (
 				DBAAEC8E26174B8E00182F04 /* ViewController.swift in Sources */,
 				DBAAEC8A26174B8E00182F04 /* AppDelegate.swift in Sources */,
+				DBAAECD326174E0300182F04 /* APIService.swift in Sources */,
 				DBAAEC8C26174B8E00182F04 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

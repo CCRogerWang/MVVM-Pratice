@@ -18,6 +18,8 @@
 		DBAAECA126174B9000182F04 /* MVVM_PraticeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAECA026174B9000182F04 /* MVVM_PraticeTests.swift */; };
 		DBAAECAC26174B9000182F04 /* MVVM_PraticeUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAECAB26174B9000182F04 /* MVVM_PraticeUITests.swift */; };
 		DBAAECD326174E0300182F04 /* APIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAECD226174E0300182F04 /* APIService.swift */; };
+		DBAAECDD26174F1600182F04 /* TaipeiZooPlantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAECDC26174F1600182F04 /* TaipeiZooPlantsModel.swift */; };
+		DBAAECE226174F3C00182F04 /* TaipeiZooAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAECE126174F3C00182F04 /* TaipeiZooAPIService.swift */; };
 		E26E0E24DD666E61060742A2 /* Pods_MVVM_PraticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA10945BD52A483FF139006 /* Pods_MVVM_PraticeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +62,8 @@
 		DBAAECAB26174B9000182F04 /* MVVM_PraticeUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVM_PraticeUITests.swift; sourceTree = "<group>"; };
 		DBAAECAD26174B9000182F04 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		DBAAECD226174E0300182F04 /* APIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIService.swift; sourceTree = "<group>"; };
+		DBAAECDC26174F1600182F04 /* TaipeiZooPlantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaipeiZooPlantsModel.swift; sourceTree = "<group>"; };
+		DBAAECE126174F3C00182F04 /* TaipeiZooAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaipeiZooAPIService.swift; sourceTree = "<group>"; };
 		F1C352E039949B5C6972693E /* Pods-MVVM-Pratice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Pratice.release.xcconfig"; path = "Target Support Files/Pods-MVVM-Pratice/Pods-MVVM-Pratice.release.xcconfig"; sourceTree = "<group>"; };
 		F380E5A3EEC319E71263FF7D /* Pods-MVVM-PraticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-PraticeTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVM-PraticeTests/Pods-MVVM-PraticeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F68FB1E39904C69763154077 /* Pods-MVVM-Pratice-MVVM-PraticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Pratice-MVVM-PraticeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVVM-Pratice-MVVM-PraticeUITests/Pods-MVVM-Pratice-MVVM-PraticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -192,6 +196,7 @@
 			isa = PBXGroup;
 			children = (
 				DBAAECD226174E0300182F04 /* APIService.swift */,
+				DBAAECE126174F3C00182F04 /* TaipeiZooAPIService.swift */,
 			);
 			path = APIServices;
 			sourceTree = "<group>";
@@ -207,6 +212,7 @@
 		DBAAECD826174E3700182F04 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				DBAAECDC26174F1600182F04 /* TaipeiZooPlantsModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -452,6 +458,8 @@
 				DBAAEC8E26174B8E00182F04 /* ViewController.swift in Sources */,
 				DBAAEC8A26174B8E00182F04 /* AppDelegate.swift in Sources */,
 				DBAAECD326174E0300182F04 /* APIService.swift in Sources */,
+				DBAAECE226174F3C00182F04 /* TaipeiZooAPIService.swift in Sources */,
+				DBAAECDD26174F1600182F04 /* TaipeiZooPlantsModel.swift in Sources */,
 				DBAAEC8C26174B8E00182F04 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

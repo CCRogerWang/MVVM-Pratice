@@ -44,8 +44,6 @@ class TaipeiZooAPIService: TaipeiZooPlantAPIs {
                 }
                 
             }
-            .asDriver { (error) -> Driver<PlantList> in
-                return Driver.empty()
-            }
+            .asDriverOnErrorJustComplete()
     }
 }

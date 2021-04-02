@@ -23,10 +23,10 @@ class ViewModel: ViewModelType {
         let footerRefresh: Driver<Void>
         
         /// scrolling stream: contentOffset, self.customNavitaonBarView.frame
-        let scrollingEvent: Observable<(CGPoint, CGRect)>
+        let scrollingEvent: Observable<(CGPoint, CGRect?)>
         
         /// stop scroll stream
-        let didEndScroll: Observable<CGRect>
+        let didEndScroll: Observable<CGRect?>
     }
     
     struct Output {
@@ -35,13 +35,13 @@ class ViewModel: ViewModelType {
         let endFooterRefreshing: Driver<Bool>
         
         /// NavigationBar Frame
-        let customNavigationBarFrame: Driver<CGRect>
+        let customNavigationBarFrame: Driver<CGRect?>
         
         /// contentOffsetY?
         let adjustTableViewContentOffsetY: Driver<CGFloat?>
         
         /// conent labels alpha
-        let adjustConetntLabelsAlpha: Driver<(CGFloat, CGFloat)>
+        let adjustConetntLabelsAlpha: Driver<(CGFloat?, CGFloat?)>
     }
     
     let tableData = BehaviorRelay<[Plant]>(value: [])
@@ -132,8 +132,11 @@ class ViewModel: ViewModelType {
         }
     }
     
-    func getCustomNavigationFrame(contentOffset: CGPoint, frame: CGRect) -> CGRect {
-        var frame = frame
+    func getCustomNavigationFrame(contentOffset: CGPoint, frame: CGRect?) -> CGRect? {
+        guard let f = frame else {
+            return nil
+        }
+        var frame = f
         // default is -200. scroll up > -200, scroll down < -200
         
         /*
@@ -157,8 +160,11 @@ class ViewModel: ViewModelType {
         return frame
     }
     
-    func getAdjustY(frame: CGRect) -> CGFloat? {
-        let newFrame = frame
+    func getAdjustY(frame: CGRect?) -> CGFloat? {
+        guard let f = frame else {
+            return nil
+        }
+        let newFrame = f
         if newFrame.origin.y < CustomNavigationViewStyle.threshold && newFrame.origin.y != CustomNavigationViewStyle.smallCustomNavigationViewY {
             return CustomNavigationViewStyle.small.tableViewContentSizeY
         }
@@ -169,11 +175,14 @@ class ViewModel: ViewModelType {
         return nil
     }
     
-    func getContentLabelsAlpha(frame: CGRect) -> (CGFloat, CGFloat) {
+    func getContentLabelsAlpha(frame: CGRect?) -> (CGFloat?, CGFloat?) {
+        guard let f = frame else {
+            return (nil, nil)
+        }
         //  0 to -156
         // B 1.0 to 0.0
         // S 1 - B to 1 - B
-        let bigContentLabelAlpha =  (frame.origin.y + 156) / 156.0
+        let bigContentLabelAlpha =  (f.origin.y + 156) / 156.0
         let smallContentLabelAlpha = 1 - bigContentLabelAlpha
         return (smallContentLabelAlpha, bigContentLabelAlpha)
     }

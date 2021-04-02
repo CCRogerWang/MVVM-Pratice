@@ -32,11 +32,11 @@ class PlantListViewController: UIViewController {
     private func setupUI() {
         navigationController?.setNavigationBarHidden(true, animated: false)
         cutomNavigationBarHeightConstraint.constant = CustomNavigationViewStyle.NavigationAndStatusBarHeight
-        self.tableView.register(UINib(nibName: "PlantTableViewCell", bundle: nil), forCellReuseIdentifier: "PlantTableViewCell")
-        
-        self.tableView.mj_header = MJRefreshNormalHeader()
-        self.tableView.mj_footer = MJRefreshBackNormalFooter()
-        self.tableView.contentInset = UIEdgeInsets(top: 200.0, left: 0, bottom: 0, right: 0)
+        tableView.register(UINib(nibName: "PlantTableViewCell", bundle: nil), forCellReuseIdentifier: "PlantTableViewCell")
+
+        tableView.mj_header = MJRefreshNormalHeader()
+        tableView.mj_footer = MJRefreshBackNormalFooter()
+        tableView.contentInset = UIEdgeInsets(top: 200.0, left: 0, bottom: 0, right: 0)
     }
     
     private func bindViewModel() {
@@ -44,21 +44,23 @@ class PlantListViewController: UIViewController {
         
         // observe scrolling event
         let scrollingEvent = tableView.rx.contentOffset
-            .map { (contentOffset) -> (CGPoint, CGRect) in
-                return (contentOffset, self.customNavitaonBarView.frame)
+            .map { [weak self] (contentOffset) -> (CGPoint, CGRect?) in
+                return (contentOffset, self?.customNavitaonBarView.frame ?? nil)
             }
         
         // In order to observe scroll view stopped,
         // merge didEndDragging and didEndDecelerating to observe both event.
         //
         let didEndScroll = Observable.merge(tableView.rx.didEndDragging.mapToVoid(), tableView.rx.didEndDecelerating.mapToVoid())
-            .map({ (_) -> CGRect in
-                return self.customNavitaonBarView.frame
+            .map({ [weak self] (_) -> CGRect? in
+                return self?.customNavitaonBarView.frame ?? nil
             })
         
         
-        let input = ViewModel.Input(headerRefresh: self.tableView.mj_header!.rx.refreshing.asDriver(),
-                                    footerRefresh: self.tableView.mj_footer!.rx.refreshing.asDriver(), scrollingEvent: scrollingEvent, didEndScroll: didEndScroll)
+        let input = ViewModel.Input(headerRefresh: tableView.mj_header!.rx.refreshing.asDriver(),
+                                    footerRefresh: tableView.mj_footer!.rx.refreshing.asDriver(),
+                                    scrollingEvent: scrollingEvent,
+                                    didEndScroll: didEndScroll)
         let output = viewModel.transform(input: input)
         
         //bind data
@@ -72,15 +74,22 @@ class PlantListViewController: UIViewController {
 
         // bind customNavitaonBarView.rx.frame
         output.customNavigationBarFrame
-            .drive(customNavitaonBarView.rx.frame)
+            .drive(onNext: { [weak self] (frame) in
+                if let f = frame {
+                    self?.customNavitaonBarView.frame = f
+                }
+            })
             .disposed(by: disposeBag)
         
         // bind adjust tableview contentOffset
         output.adjustTableViewContentOffsetY
-            .drive(onNext: { (newY) in
+            .drive(onNext: { [weak self] (newY) in
                 if let y = newY {
+                    guard let ws = self else {
+                        return
+                    }
                     UIView.animate(withDuration: 0.3) {
-                        self.tableView.contentOffset.y = y
+                        ws.tableView.contentOffset.y = y
                     }
                 }
             })
@@ -88,11 +97,14 @@ class PlantListViewController: UIViewController {
         
         // binding content labels alpha
         output.adjustConetntLabelsAlpha
-            .drive(onNext: { smallAlpha, bigAlpha in
-                self.bigContnetLabel.alpha = bigAlpha
-                self.smallContnetLabel.alpha = smallAlpha
+            .drive(onNext: { [weak self] (smallAlpha, bigAlpha)  in
+                if let ba = bigAlpha, let sa = smallAlpha {
+                    self?.bigContnetLabel.alpha = ba
+                    self?.smallContnetLabel.alpha = sa
+                }
             })
             .disposed(by: disposeBag)
+        
         
         // binding ending sequence to header refresh
         output.endHeaderRefreshing

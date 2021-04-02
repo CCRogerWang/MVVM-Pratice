@@ -21,6 +21,14 @@
 		DBAAECDD26174F1600182F04 /* TaipeiZooPlantsModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAECDC26174F1600182F04 /* TaipeiZooPlantsModel.swift */; };
 		DBAAECE226174F3C00182F04 /* TaipeiZooAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAECE126174F3C00182F04 /* TaipeiZooAPIService.swift */; };
 		DBAAECF42617522800182F04 /* ObservableType+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAECF32617522800182F04 /* ObservableType+Utils.swift */; };
+		DBAAECFA261752A100182F04 /* PlantListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAECF9261752A100182F04 /* PlantListViewModel.swift */; };
+		DBAAED03261752DE00182F04 /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAED02261752DE00182F04 /* ViewModelType.swift */; };
+		DBAAED082617530300182F04 /* CustomNavigationViewStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAED072617530300182F04 /* CustomNavigationViewStyle.swift */; };
+		DBAAED0D2617532F00182F04 /* UIStatusBarManager+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAED0C2617532F00182F04 /* UIStatusBarManager+Utils.swift */; };
+		DBAAED122617535600182F04 /* PlantListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAED112617535600182F04 /* PlantListViewController.swift */; };
+		DBAAED17261753AC00182F04 /* MJRefresh+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAED16261753AC00182F04 /* MJRefresh+Utils.swift */; };
+		DBAAED1D261753DC00182F04 /* PlantTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DBAAED1B261753DC00182F04 /* PlantTableViewCell.swift */; };
+		DBAAED1E261753DC00182F04 /* PlantTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DBAAED1C261753DC00182F04 /* PlantTableViewCell.xib */; };
 		E26E0E24DD666E61060742A2 /* Pods_MVVM_PraticeTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FA10945BD52A483FF139006 /* Pods_MVVM_PraticeTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -66,6 +74,14 @@
 		DBAAECDC26174F1600182F04 /* TaipeiZooPlantsModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaipeiZooPlantsModel.swift; sourceTree = "<group>"; };
 		DBAAECE126174F3C00182F04 /* TaipeiZooAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TaipeiZooAPIService.swift; sourceTree = "<group>"; };
 		DBAAECF32617522800182F04 /* ObservableType+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ObservableType+Utils.swift"; sourceTree = "<group>"; };
+		DBAAECF9261752A100182F04 /* PlantListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListViewModel.swift; sourceTree = "<group>"; };
+		DBAAED02261752DE00182F04 /* ViewModelType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
+		DBAAED072617530300182F04 /* CustomNavigationViewStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomNavigationViewStyle.swift; sourceTree = "<group>"; };
+		DBAAED0C2617532F00182F04 /* UIStatusBarManager+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIStatusBarManager+Utils.swift"; sourceTree = "<group>"; };
+		DBAAED112617535600182F04 /* PlantListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantListViewController.swift; sourceTree = "<group>"; };
+		DBAAED16261753AC00182F04 /* MJRefresh+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MJRefresh+Utils.swift"; sourceTree = "<group>"; };
+		DBAAED1B261753DC00182F04 /* PlantTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlantTableViewCell.swift; sourceTree = "<group>"; };
+		DBAAED1C261753DC00182F04 /* PlantTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PlantTableViewCell.xib; sourceTree = "<group>"; };
 		F1C352E039949B5C6972693E /* Pods-MVVM-Pratice.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Pratice.release.xcconfig"; path = "Target Support Files/Pods-MVVM-Pratice/Pods-MVVM-Pratice.release.xcconfig"; sourceTree = "<group>"; };
 		F380E5A3EEC319E71263FF7D /* Pods-MVVM-PraticeTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-PraticeTests.debug.xcconfig"; path = "Target Support Files/Pods-MVVM-PraticeTests/Pods-MVVM-PraticeTests.debug.xcconfig"; sourceTree = "<group>"; };
 		F68FB1E39904C69763154077 /* Pods-MVVM-Pratice-MVVM-PraticeUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MVVM-Pratice-MVVM-PraticeUITests.debug.xcconfig"; path = "Target Support Files/Pods-MVVM-Pratice-MVVM-PraticeUITests/Pods-MVVM-Pratice-MVVM-PraticeUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -147,6 +163,7 @@
 		DBAAEC8826174B8E00182F04 /* MVVM-Pratice */ = {
 			isa = PBXGroup;
 			children = (
+				DBAAED01261752CB00182F04 /* Protocols */,
 				DBAAECD126174DE300182F04 /* APIServices */,
 				DBAAECCD26174DCF00182F04 /* Extensions */,
 				DBAAECC926174DB800182F04 /* Modules */,
@@ -191,6 +208,8 @@
 			isa = PBXGroup;
 			children = (
 				DBAAECF32617522800182F04 /* ObservableType+Utils.swift */,
+				DBAAED0C2617532F00182F04 /* UIStatusBarManager+Utils.swift */,
+				DBAAED16261753AC00182F04 /* MJRefresh+Utils.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -207,7 +226,12 @@
 		DBAAECD726174E2C00182F04 /* TaipeiZooPlant */ = {
 			isa = PBXGroup;
 			children = (
+				DBF757AE261757BF00AEBC75 /* Enums */,
 				DBAAECD826174E3700182F04 /* Models */,
+				DBAAED112617535600182F04 /* PlantListViewController.swift */,
+				DBAAECF9261752A100182F04 /* PlantListViewModel.swift */,
+				DBAAED1B261753DC00182F04 /* PlantTableViewCell.swift */,
+				DBAAED1C261753DC00182F04 /* PlantTableViewCell.xib */,
 			);
 			path = TaipeiZooPlant;
 			sourceTree = "<group>";
@@ -218,6 +242,22 @@
 				DBAAECDC26174F1600182F04 /* TaipeiZooPlantsModel.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DBAAED01261752CB00182F04 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				DBAAED02261752DE00182F04 /* ViewModelType.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		DBF757AE261757BF00AEBC75 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				DBAAED072617530300182F04 /* CustomNavigationViewStyle.swift */,
+			);
+			path = Enums;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -329,6 +369,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DBAAEC9626174B9000182F04 /* LaunchScreen.storyboard in Resources */,
+				DBAAED1E261753DC00182F04 /* PlantTableViewCell.xib in Resources */,
 				DBAAEC9326174B9000182F04 /* Assets.xcassets in Resources */,
 				DBAAEC9126174B8E00182F04 /* Main.storyboard in Resources */,
 			);
@@ -460,11 +501,18 @@
 			files = (
 				DBAAEC8E26174B8E00182F04 /* ViewController.swift in Sources */,
 				DBAAEC8A26174B8E00182F04 /* AppDelegate.swift in Sources */,
+				DBAAECFA261752A100182F04 /* PlantListViewModel.swift in Sources */,
+				DBAAED122617535600182F04 /* PlantListViewController.swift in Sources */,
 				DBAAECF42617522800182F04 /* ObservableType+Utils.swift in Sources */,
+				DBAAED17261753AC00182F04 /* MJRefresh+Utils.swift in Sources */,
 				DBAAECD326174E0300182F04 /* APIService.swift in Sources */,
 				DBAAECE226174F3C00182F04 /* TaipeiZooAPIService.swift in Sources */,
 				DBAAECDD26174F1600182F04 /* TaipeiZooPlantsModel.swift in Sources */,
+				DBAAED1D261753DC00182F04 /* PlantTableViewCell.swift in Sources */,
 				DBAAEC8C26174B8E00182F04 /* SceneDelegate.swift in Sources */,
+				DBAAED03261752DE00182F04 /* ViewModelType.swift in Sources */,
+				DBAAED082617530300182F04 /* CustomNavigationViewStyle.swift in Sources */,
+				DBAAED0D2617532F00182F04 /* UIStatusBarManager+Utils.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -570,7 +618,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -625,7 +673,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -643,6 +691,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "MVVM-Pratice/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -662,6 +711,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = "MVVM-Pratice/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
